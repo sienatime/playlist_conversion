@@ -1,0 +1,4 @@
+*.pyc
+/env
+/playlists
+.DS_Store
