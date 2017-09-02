@@ -1,5 +1,5 @@
 from gmusicapi import Mobileclient
-from music_library import MusicLibrary
+from PlaylistConversion.music_library import MusicLibrary
 import os
 
 class GoogleMusic:
@@ -9,7 +9,7 @@ class GoogleMusic:
 
   def log_in(self):
     email = os.environ['GOOGLE_ACCOUNT_EMAIL']
-    password = os.environ['GOOGLE_ACCOUNT_ACCESS_TOKEN']
+    password = os.environ['GOOGLE_ACCOUNT_PASSWORD']
     api = Mobileclient()
     logged_in = api.login(email, password, Mobileclient.FROM_MAC_ADDRESS)
     # logged_in is True if login was successful

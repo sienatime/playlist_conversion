@@ -1,5 +1,5 @@
-import GoogleMusic
-import PlaylistParser
+from PlaylistConversion.google_music import GoogleMusic
+from PlaylistConversion.playlist_parser import PlaylistParser
 
 class PlaylistConverter:
   def __init__(self):
@@ -12,7 +12,7 @@ class PlaylistConverter:
     playlist_id = self.service.make_playlist(playlist_name)
 
     try:
-      parser = PlaylistParser("playlists/" + filename)
+      parser = PlaylistParser(filename)
       song_ids = []
 
       for i in xrange(len(parser.tracks)):
